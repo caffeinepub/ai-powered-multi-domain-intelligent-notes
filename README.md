@@ -1,2 +1,3 @@
-# ai-powered-multi-domain-intelligent-notes
-Exported from Caffeine project: AI-Powered Multi-Domain Intelligent Notes
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

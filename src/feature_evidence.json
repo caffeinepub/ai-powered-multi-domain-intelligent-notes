@@ -1,0 +1,172 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-legal-document-analysis-capability-that-extracts-key-information-from-uploaded-legal-documents-contracts-agreements-terms-and-presents-structured-explanations-of-clauses-obligations-rights-dates-and-parties-involved-in-an-easy-to-understand-format",
+      "featureTitle": "Add legal document analysis capability that extracts key information from uploaded legal documents (contracts, agreements, terms) and presents structured explanations of clauses, obligations, rights, dates, and parties involved in an easy-to-understand format.",
+      "files": [
+        "frontend/src/components/LegalAnalysisView.tsx",
+        "frontend/src/components/ReportAnalysis.tsx",
+        "frontend/src/components/ReportCard.tsx",
+        "frontend/src/hooks/useReports.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-smart-timetable-feature-for-students-that-allows-them-to-input-their-class-schedules-study-sessions-and-deadlines-the-timetable-should-intelligently-organize-time-blocks-and-provide-a-calendar-view-of-upcoming-commitments",
+      "featureTitle": "Create a smart timetable feature for students that allows them to input their class schedules, study sessions, and deadlines. The timetable should intelligently organize time blocks and provide a calendar view of upcoming commitments.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/TimetableEntry.tsx",
+        "frontend/src/components/TimetableEntryForm.tsx",
+        "frontend/src/hooks/useTimetable.ts",
+        "frontend/src/pages/TimetablePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-automatic-quiz-generation-that-analyzes-what-students-have-learned-from-their-notes-and-documents-then-creates-relevant-quiz-questions-to-test-comprehension-quizzes-should-be-based-on-the-actual-content-the-student-has-stored-in-the-app",
+      "featureTitle": "Implement automatic quiz generation that analyzes what students have learned from their notes and documents, then creates relevant quiz questions to test comprehension. Quizzes should be based on the actual content the student has stored in the app.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/QuizCard.tsx",
+        "frontend/src/components/QuizGenerationDialog.tsx",
+        "frontend/src/components/QuizTaker.tsx",
+        "frontend/src/hooks/useQuizzes.ts",
+        "frontend/src/pages/QuizzesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-revision-reminder-system-that-schedules-alerts-for-students-to-review-their-material-tracks-how-many-times-each-topic-has-been-revised-and-displays-revision-counts-reminders-should-be-based-on-the-timetable-and-learning-content",
+      "featureTitle": "Add revision reminder system that schedules alerts for students to review their material, tracks how many times each topic has been revised, and displays revision counts. Reminders should be based on the timetable and learning content.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/ReminderCard.tsx",
+        "frontend/src/components/ReminderForm.tsx",
+        "frontend/src/hooks/useReminders.ts",
+        "frontend/src/pages/RemindersPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-enhance-the-ai-powered-notes-feature-to-provide-intelligent-suggestions-summaries-and-key-point-extraction-from-user-created-notes-using-nlp-techniques-notes-should-feel-enhanced-by-ai-assistance-rather-than-being-plain-text-storage",
+      "featureTitle": "Enhance the AI-powered notes feature to provide intelligent suggestions, summaries, and key point extraction from user-created notes using NLP techniques. Notes should feel enhanced by AI assistance rather than being plain text storage.",
+      "files": [
+        "frontend/src/components/NoteCard.tsx",
+        "frontend/src/components/NoteEditor.tsx",
+        "frontend/src/pages/NotesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-any-explicit-domain-selection-ui-or-prompts-the-system-should-automatically-handle-domain-classification-in-the-background-presenting-a-unified-interface-where-users-simply-upload-documents-or-create-notes-without-choosing-categories",
+      "featureTitle": "Remove any explicit domain selection UI or prompts. The system should automatically handle domain classification in the background, presenting a unified interface where users simply upload documents or create notes without choosing categories.",
+      "files": [
+        "frontend/src/components/DocumentUpload.tsx",
+        "frontend/src/pages/ReportsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-refine-the-overall-user-interface-to-achieve-a-polished-professional-appearance-comparable-to-commercial-applications-ensure-consistent-spacing-clear-visual-hierarchy-smooth-transitions-and-intuitive-navigation-throughout-all-features-notes-reports-timetable-quizzes-reminders",
+      "featureTitle": "Refine the overall user interface to achieve a polished, professional appearance comparable to commercial applications. Ensure consistent spacing, clear visual hierarchy, smooth transitions, and intuitive navigation throughout all features (notes, reports, timetable, quizzes, reminders).",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/NoteCard.tsx",
+        "frontend/src/components/ReportCard.tsx",
+        "frontend/src/pages/LandingPage.tsx",
+        "frontend/src/pages/NotesPage.tsx",
+        "frontend/src/pages/ReportsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

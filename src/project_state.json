@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "AI-Powered Multi-Domain Intelligent Notes - an AI/NLP-based notes app with medical report analysis, legal document analysis, smart timetable for students, automated quiz generation, and revision reminders. Auto-domain classification (medical, legal, notes) without explicit user selection. CSV dataset training for document analysis.",
+  "architectural_notes": [
+    "Frontend: HTML, CSS, JavaScript",
+    "Backend: API-based architecture",
+    "NLP integration for document analysis",
+    "Auto-domain classification (medical, legal, notes)",
+    "User-friendly interface without explicit domain selection",
+    "CSV dataset training for document analysis"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-notes-application-where-users-can-create-view-edit-and-delete-text-notes-with-a-clean-modern-interface",
+      "title": "Create a notes application where users can create, view, edit, and delete text notes with a clean, modern interface",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-document-upload-functionality-that-accepts-pdf-or-text-files-for-analysis-starting-with-medical-reports-as-the-initial-domain",
+      "title": "Implement document upload functionality that accepts PDF or text files for analysis, starting with medical reports as the initial domain",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-cohesive-visual-theme-with-warm-trustworthy-colors-avoiding-blue-and-purple-clean-typography-and-professional-medical-grade-aesthetics-that-inspire-confidence",
+      "title": "Design a cohesive visual theme with warm, trustworthy colors (avoiding blue and purple), clean typography, and professional medical-grade aesthetics that inspire confidence",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-user-authentication-using-internet-identity-so-users-can-securely-access-their-personal-notes-and-analyzed-documents",
+      "title": "Implement user authentication using Internet Identity so users can securely access their personal notes and analyzed documents",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-legal-document-analysis-capability-that-extracts-key-information-from-uploaded-legal-documents-contracts-agreements-terms-and-presents-structured-explanations-of-clauses-obligations-rights-dates-and-parties-involved-in-an-easy-to-understand-format",
+      "title": "Add legal document analysis capability that extracts key information from uploaded legal documents (contracts, agreements, terms) and presents structured explanations of clauses, obligations, rights, dates, and parties involved in an easy-to-understand format.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-smart-timetable-feature-for-students-that-allows-them-to-input-their-class-schedules-study-sessions-and-deadlines-the-timetable-should-intelligently-organize-time-blocks-and-provide-a-calendar-view-of-upcoming-commitments",
+      "title": "Create a smart timetable feature for students that allows them to input their class schedules, study sessions, and deadlines. The timetable should intelligently organize time blocks and provide a calendar view of upcoming commitments.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-automatic-quiz-generation-that-analyzes-what-students-have-learned-from-their-notes-and-documents-then-creates-relevant-quiz-questions-to-test-comprehension-quizzes-should-be-based-on-the-actual-content-the-student-has-stored-in-the-app",
+      "title": "Implement automatic quiz generation that analyzes what students have learned from their notes and documents, then creates relevant quiz questions to test comprehension. Quizzes should be based on the actual content the student has stored in the app.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-revision-reminder-system-that-schedules-alerts-for-students-to-review-their-material-tracks-how-many-times-each-topic-has-been-revised-and-displays-revision-counts-reminders-should-be-based-on-the-timetable-and-learning-content",
+      "title": "Add revision reminder system that schedules alerts for students to review their material, tracks how many times each topic has been revised, and displays revision counts. Reminders should be based on the timetable and learning content.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-ai-powered-notes-feature-to-provide-intelligent-suggestions-summaries-and-key-point-extraction-from-user-created-notes-using-nlp-techniques-notes-should-feel-enhanced-by-ai-assistance-rather-than-being-plain-text-storage",
+      "title": "Enhance the AI-powered notes feature to provide intelligent suggestions, summaries, and key point extraction from user-created notes using NLP techniques. Notes should feel enhanced by AI assistance rather than being plain text storage.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-any-explicit-domain-selection-ui-or-prompts-the-system-should-automatically-handle-domain-classification-in-the-background-presenting-a-unified-interface-where-users-simply-upload-documents-or-create-notes-without-choosing-categories",
+      "title": "Remove any explicit domain selection UI or prompts. The system should automatically handle domain classification in the background, presenting a unified interface where users simply upload documents or create notes without choosing categories.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refine-the-overall-user-interface-to-achieve-a-polished-professional-appearance-comparable-to-commercial-applications-ensure-consistent-spacing-clear-visual-hierarchy-smooth-transitions-and-intuitive-navigation-throughout-all-features-notes-reports-timetable-quizzes-reminders",
+      "title": "Refine the overall user interface to achieve a polished, professional appearance comparable to commercial applications. Ensure consistent spacing, clear visual hierarchy, smooth transitions, and intuitive navigation throughout all features (notes, reports, timetable, quizzes, reminders).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Document analysis for one domain (medical or legal)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "AI-powered notes functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Smart timetable for students",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Automated quiz generation based on learning",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Revision reminders and tracking",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add AI-powered document analysis that extracts key information from uploaded medical reports and presents it in a structured, easy-to-understand format with explanations",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement automatic domain classification that analyzes uploaded documents and categorizes them as medical reports, legal documents, or general notes without requiring user selection. The system should detect document type based on content patterns and terminology.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "AI-Powered Multi-Domain Intelligent Notes",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

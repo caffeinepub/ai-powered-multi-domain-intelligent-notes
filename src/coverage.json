@@ -1,0 +1,197 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T18:02:00.066Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 8,
+    "implemented": 7,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Add revision reminder system that schedules alerts for students to review their material, tracks how many times each topic has been revised, and displays revision counts. Reminders should be based on the timetable and learning content.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/RemindersPage.tsx",
+          "frontend/src/components/ReminderCard.tsx",
+          "frontend/src/components/ReminderForm.tsx",
+          "frontend/src/hooks/useReminders.ts",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/RemindersPage.tsx",
+          "frontend/src/components/ReminderCard.tsx",
+          "frontend/src/components/ReminderForm.tsx",
+          "frontend/src/hooks/useReminders.ts",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Enhance the AI-powered notes feature to provide intelligent suggestions, summaries, and key point extraction from user-created notes using NLP techniques. Notes should feel enhanced by AI assistance rather than being plain text storage.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/NoteCard.tsx",
+          "frontend/src/components/NoteEditor.tsx",
+          "frontend/src/pages/NotesPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/NoteCard.tsx",
+          "frontend/src/components/NoteEditor.tsx",
+          "frontend/src/pages/NotesPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Remove any explicit domain selection UI or prompts. The system should automatically handle domain classification in the background, presenting a unified interface where users simply upload documents or create notes without choosing categories.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/DocumentUpload.tsx",
+          "frontend/src/pages/ReportsPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/DocumentUpload.tsx",
+          "frontend/src/pages/ReportsPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Refine the overall user interface to achieve a polished, professional appearance comparable to commercial applications. Ensure consistent spacing, clear visual hierarchy, smooth transitions, and intuitive navigation throughout all features (notes, reports, timetable, quizzes, reminders).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/pages/NotesPage.tsx",
+          "frontend/src/pages/ReportsPage.tsx",
+          "frontend/src/pages/LandingPage.tsx",
+          "frontend/src/components/NoteCard.tsx",
+          "frontend/src/components/ReportCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/pages/NotesPage.tsx",
+          "frontend/src/pages/ReportsPage.tsx",
+          "frontend/src/pages/LandingPage.tsx",
+          "frontend/src/components/NoteCard.tsx",
+          "frontend/src/components/ReportCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Implement automatic domain classification that analyzes uploaded documents and categorizes them as medical reports, legal documents, or general notes without requiring user selection. The system should detect document type based on content patterns and terminology.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Add legal document analysis capability that extracts key information from uploaded legal documents (contracts, agreements, terms) and presents structured explanations of clauses, obligations, rights, dates, and parties involved in an easy-to-understand format.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LegalAnalysisView.tsx",
+          "frontend/src/components/ReportCard.tsx",
+          "frontend/src/components/ReportAnalysis.tsx",
+          "frontend/src/hooks/useReports.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LegalAnalysisView.tsx",
+          "frontend/src/components/ReportCard.tsx",
+          "frontend/src/components/ReportAnalysis.tsx",
+          "frontend/src/hooks/useReports.ts"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create a smart timetable feature for students that allows them to input their class schedules, study sessions, and deadlines. The timetable should intelligently organize time blocks and provide a calendar view of upcoming commitments.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/TimetablePage.tsx",
+          "frontend/src/components/TimetableEntry.tsx",
+          "frontend/src/components/TimetableEntryForm.tsx",
+          "frontend/src/hooks/useTimetable.ts",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/TimetablePage.tsx",
+          "frontend/src/components/TimetableEntry.tsx",
+          "frontend/src/components/TimetableEntryForm.tsx",
+          "frontend/src/hooks/useTimetable.ts",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Implement automatic quiz generation that analyzes what students have learned from their notes and documents, then creates relevant quiz questions to test comprehension. Quizzes should be based on the actual content the student has stored in the app.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/QuizzesPage.tsx",
+          "frontend/src/components/QuizCard.tsx",
+          "frontend/src/components/QuizTaker.tsx",
+          "frontend/src/components/QuizGenerationDialog.tsx",
+          "frontend/src/hooks/useQuizzes.ts",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/QuizzesPage.tsx",
+          "frontend/src/components/QuizCard.tsx",
+          "frontend/src/components/QuizTaker.tsx",
+          "frontend/src/components/QuizGenerationDialog.tsx",
+          "frontend/src/hooks/useQuizzes.ts",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/DocumentUpload.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/LegalAnalysisView.tsx",
+    "frontend/src/components/NoteCard.tsx",
+    "frontend/src/components/NoteEditor.tsx",
+    "frontend/src/components/QuizCard.tsx",
+    "frontend/src/components/QuizGenerationDialog.tsx",
+    "frontend/src/components/QuizTaker.tsx",
+    "frontend/src/components/ReminderCard.tsx",
+    "frontend/src/components/ReminderForm.tsx",
+    "frontend/src/components/ReportAnalysis.tsx",
+    "frontend/src/components/ReportCard.tsx",
+    "frontend/src/components/TimetableEntry.tsx",
+    "frontend/src/components/TimetableEntryForm.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useNotes.ts",
+    "frontend/src/hooks/useQuizzes.ts",
+    "frontend/src/hooks/useReminders.ts",
+    "frontend/src/hooks/useReports.ts",
+    "frontend/src/hooks/useTimetable.ts",
+    "frontend/src/pages/LandingPage.tsx",
+    "frontend/src/pages/NotesPage.tsx",
+    "frontend/src/pages/QuizzesPage.tsx",
+    "frontend/src/pages/RemindersPage.tsx",
+    "frontend/src/pages/ReportsPage.tsx",
+    "frontend/src/pages/TimetablePage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

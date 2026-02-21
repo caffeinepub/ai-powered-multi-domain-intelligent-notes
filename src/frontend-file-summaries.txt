@@ -1,0 +1,22 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, authentication flow, profile setup modal integration, and theme provider wrapper.",
+  "frontend/src/pages/LandingPage.tsx": "Public landing page for unauthenticated users featuring hero section with medical imagery, feature highlights, and login call-to-action with warm gradient design.",
+  "frontend/src/pages/NotesPage.tsx": "Notes management page displaying user's notes in a grid layout with create, edit, and delete functionality using dialog-based editor.",
+  "frontend/src/pages/ReportsPage.tsx": "Medical reports page with hero banner, upload functionality, and grid display of uploaded reports with analysis status.",
+  "frontend/src/components/Layout.tsx": "Application layout wrapper with navigation header, user profile display, logout functionality, and footer with caffeine.ai attribution.",
+  "frontend/src/components/NoteCard.tsx": "Individual note card component displaying note title, content preview, timestamp, and edit/delete actions with confirmation dialog.",
+  "frontend/src/components/NoteEditor.tsx": "Note creation and editing form component with title and content fields, supporting both create and edit modes.",
+  "frontend/src/components/DocumentUpload.tsx": "Medical report upload component with file selection, validation, progress tracking using ExternalBlob, and medical icon display.",
+  "frontend/src/components/ReportCard.tsx": "Medical report card component showing report status, upload date, analysis availability, and view details action.",
+  "frontend/src/components/ReportAnalysis.tsx": "Detailed report analysis view with document preview, editable analysis text area, and save functionality for medical report insights.",
+  "frontend/src/components/ProfileSetupModal.tsx": "First-time user profile setup modal prompting for name input, preventing dismissal until profile is created.",
+  "frontend/src/hooks/useUserProfile.ts": "React Query hooks for user profile operations including getCallerUserProfile with proper loading state handling and saveCallerUserProfile mutation.",
+  "frontend/src/hooks/useNotes.ts": "React Query hooks for notes CRUD operations including list, get, create with automatic domain classification, edit, and delete with cache invalidation.",
+  "frontend/src/hooks/useReports.ts": "React Query hooks for medical reports operations including list, get, upload with ExternalBlob, and save analysis with cache management.",
+  "frontend/src/index.css": "Global styles with warm OKLCH color system featuring amber/orange/coral palette for medical context, supporting both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with warm color palette, Inter font family, custom shadows, and extended design tokens for healthcare aesthetics.",
+  "frontend/src/hooks/useTimetable.ts": "React Query hooks for timetable operations including getUserTimetableEntries, createTimetableEntry, and deleteTimetableEntry with automatic cache management.",
+  "frontend/src/hooks/useQuizzes.ts": "React Query hooks for quiz operations including getUserQuizzes, getQuiz, and saveQuiz with automatic cache invalidation after quiz creation.",
+  "frontend/src/hooks/useReminders.ts": "React Query hooks for revision reminder operations including getUserReminders, createRevisionReminder, updateReminder, and deactivateReminder with cache management.",
+  "frontend/src/components/QuizTaker.tsx": "Interactive quiz-taking component that displays questions one at a time with multiple choice options, tracks selected answers, shows progress, and displays results summary at completion with onClose prop."
+}

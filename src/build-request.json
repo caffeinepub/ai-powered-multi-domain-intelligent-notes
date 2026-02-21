@@ -1,0 +1,181 @@
+{
+  "kind": "build_request",
+  "title": "Add automatic domain classification, legal document analysis, smart timetable, quiz generation, and revision tracking",
+  "projectName": "AI-Powered Multi-Domain Intelligent Notes",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Implement automatic domain classification that analyzes uploaded documents and categorizes them as medical reports, legal documents, or general notes without requiring user selection. The system should detect document type based on content patterns and terminology.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "it should not ask for select the domain it should be classified domains for legal document, medical report and for AI notes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Documents are automatically classified into medical, legal, or notes categories upon upload",
+        "Classification happens without user input or domain selection UI",
+        "Classification results are stored with each document record"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add legal document analysis capability that extracts key information from uploaded legal documents (contracts, agreements, terms) and presents structured explanations of clauses, obligations, rights, dates, and parties involved in an easy-to-understand format.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "legal document analysis should explain the detail about the report given by the user"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Legal documents can be uploaded alongside medical reports",
+        "System extracts and explains key legal terms, obligations, and parties",
+        "Analysis results are displayed in a structured, readable format similar to medical report analysis",
+        "Users can view detailed breakdowns of legal document contents"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create a smart timetable feature for students that allows them to input their class schedules, study sessions, and deadlines. The timetable should intelligently organize time blocks and provide a calendar view of upcoming commitments.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "it should include smart timetable",
+          "alarams for student's timetable"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Students can create and manage timetable entries with dates, times, and descriptions",
+        "Timetable displays in a calendar or schedule view",
+        "System stores timetable data persistently per user",
+        "Interface is accessible from main navigation"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement automatic quiz generation that analyzes what students have learned from their notes and documents, then creates relevant quiz questions to test comprehension. Quizzes should be based on the actual content the student has stored in the app.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "automatically prepare the quiz for students based on what they learned",
+          "quizes from what they have learned"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System generates quiz questions from user's notes and document content",
+        "Quiz questions test comprehension of material stored in the app",
+        "Users can take generated quizzes and see results",
+        "Quiz history is tracked per user"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add revision reminder system that schedules alerts for students to review their material, tracks how many times each topic has been revised, and displays revision counts. Reminders should be based on the timetable and learning content.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "remainders to revise and count number of times it revised",
+          "alarams for student's timetable"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System sends reminders for revision at scheduled intervals",
+        "Revision count is tracked for each note or topic",
+        "Users can see how many times they have revised each item",
+        "Reminders integrate with timetable schedule"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Enhance the AI-powered notes feature to provide intelligent suggestions, summaries, and key point extraction from user-created notes using NLP techniques. Notes should feel enhanced by AI assistance rather than being plain text storage.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "AI notes",
+          "make the app as unique it should have AI and NLP"
+        ]
+      },
+      "acceptanceCriteria": [
+        "AI provides automatic summaries or key points for notes",
+        "NLP-based insights are displayed within note interface",
+        "Users see clear value-add from AI processing of their notes"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Remove any explicit domain selection UI or prompts. The system should automatically handle domain classification in the background, presenting a unified interface where users simply upload documents or create notes without choosing categories.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "particularly the domain selection should not be there",
+          "it should not ask for select the domain"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No dropdown or radio buttons for domain selection exist in upload flow",
+        "Upload interface is unified for all document types",
+        "Domain is determined automatically and transparently"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Refine the overall user interface to achieve a polished, professional appearance comparable to commercial applications. Ensure consistent spacing, clear visual hierarchy, smooth transitions, and intuitive navigation throughout all features (notes, reports, timetable, quizzes, reminders).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "total webiste should like reals app",
+          "it should be user-friendly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Interface has consistent styling and spacing across all pages",
+        "Navigation is intuitive with clear labels and logical flow",
+        "Visual design appears polished and professional",
+        "All features are easily discoverable and accessible"
+      ]
+    }
+  ],
+  "constraints": [
+    "All backend logic must remain in the single main.mo actor file",
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts, useActor.ts, or main.tsx",
+    "Do not edit UI components in frontend/src/components/ui",
+    "Use only Motoko for backend, React + TypeScript + Tailwind for frontend",
+    "Maintain the existing warm color palette (amber/orange) established in the theme"
+  ],
+  "nonGoals": [
+    "Actual NLP model training (platform does not support external ML frameworks)",
+    "Integration with external AI services like OpenAI or Anthropic",
+    "Real CSV dataset processing or ML model deployment",
+    "Push notifications or SMS-based reminders",
+    "Real-time WebSocket features for live collaboration"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

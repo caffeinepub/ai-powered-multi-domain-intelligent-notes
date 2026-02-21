@@ -1,0 +1,264 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add automatic domain classification, legal document analysis, smart timetable, quiz generation, and revision tracking",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Add legal document analysis capability with structured explanations of clauses, obligations, rights, dates, and parties",
+      "acceptanceCriteria": [
+        "Legal documents can be uploaded alongside medical reports",
+        "System extracts and explains key legal terms, obligations, and parties",
+        "Analysis results are displayed in a structured, readable format similar to medical report analysis",
+        "Users can view detailed breakdowns of legal document contents"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LegalAnalysisView.tsx",
+          "operation": "create",
+          "description": "Create component to display structured legal document analysis including clauses, obligations, rights, parties, and dates in an easy-to-read format with expandable sections for detailed explanations"
+        },
+        {
+          "path": "frontend/src/components/ReportCard.tsx",
+          "operation": "modify",
+          "description": "Update to handle both medical and legal document types, display appropriate icons and labels based on domain classification, and route to correct analysis view"
+        },
+        {
+          "path": "frontend/src/components/ReportAnalysis.tsx",
+          "operation": "modify",
+          "description": "Modify to conditionally render LegalAnalysisView for legal documents or existing medical analysis for medical reports based on document domain"
+        },
+        {
+          "path": "frontend/src/hooks/useReports.ts",
+          "operation": "modify",
+          "description": "Add React Query hooks for fetching legal analysis data and saving legal analysis results using the backend's getLegalAnalysis and saveLegalAnalysis methods"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create smart timetable feature for students with class schedules, study sessions, and deadlines in calendar view",
+      "acceptanceCriteria": [
+        "Students can create and manage timetable entries with dates, times, and descriptions",
+        "Timetable displays in a calendar or schedule view",
+        "System stores timetable data persistently per user",
+        "Interface is accessible from main navigation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TimetablePage.tsx",
+          "operation": "create",
+          "description": "Create timetable management page with calendar/schedule view displaying entries by date and time, including add entry button and empty state for new users"
+        },
+        {
+          "path": "frontend/src/components/TimetableEntry.tsx",
+          "operation": "create",
+          "description": "Create card component to display individual timetable entry with type badge, title, time range, location, recurring indicator, and delete action"
+        },
+        {
+          "path": "frontend/src/components/TimetableEntryForm.tsx",
+          "operation": "create",
+          "description": "Create form component for creating timetable entries with entry type dropdown (classes, studySession, exam, deadline, other), title, start/end time pickers, location, and recurring checkbox"
+        },
+        {
+          "path": "frontend/src/hooks/useTimetable.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for timetable CRUD operations including getUserTimetableEntries, createTimetableEntry, and deleteTimetableEntry with automatic cache invalidation"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add 'Timetable' navigation link in header menu alongside Notes and Reports, maintaining consistent styling with existing navigation items"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route configuration for TimetablePage at /timetable path with authentication guard ensuring only logged-in users can access"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Implement automatic quiz generation from notes and documents with comprehension testing and result tracking",
+      "acceptanceCriteria": [
+        "System generates quiz questions from user's notes and document content",
+        "Quiz questions test comprehension of material stored in the app",
+        "Users can take generated quizzes and see results",
+        "Quiz history is tracked per user"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/QuizzesPage.tsx",
+          "operation": "create",
+          "description": "Create quizzes management page displaying list of generated quizzes with titles and creation dates, including generate quiz button and empty state prompting first quiz generation"
+        },
+        {
+          "path": "frontend/src/components/QuizCard.tsx",
+          "operation": "create",
+          "description": "Create card component to display quiz summary with title, question count, creation timestamp, and button to start quiz"
+        },
+        {
+          "path": "frontend/src/components/QuizTaker.tsx",
+          "operation": "create",
+          "description": "Create interactive quiz-taking component that displays questions one at a time with multiple choice options, tracks selected answers, shows progress, and displays results summary at completion"
+        },
+        {
+          "path": "frontend/src/components/QuizGenerationDialog.tsx",
+          "operation": "create",
+          "description": "Create dialog component allowing users to trigger quiz generation with title input and source material selection, showing generation progress and success confirmation"
+        },
+        {
+          "path": "frontend/src/hooks/useQuizzes.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for quiz operations including getUserQuizzes, getQuiz, and saveQuiz with automatic cache invalidation after quiz creation"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add 'Quizzes' navigation link in header menu alongside existing navigation items, maintaining consistent styling and positioning"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route configuration for QuizzesPage at /quizzes path with authentication guard ensuring only logged-in users can access"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add revision reminder system with scheduled alerts, revision count tracking, and timetable integration",
+      "acceptanceCriteria": [
+        "System sends reminders for revision at scheduled intervals",
+        "Revision count is tracked for each note or topic",
+        "Users can see how many times they have revised each item",
+        "Reminders integrate with timetable schedule"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/RemindersPage.tsx",
+          "operation": "create",
+          "description": "Create reminders management page displaying active and inactive revision reminders with topic, next revision date, revision count, and activation toggle in list or card grid format"
+        },
+        {
+          "path": "frontend/src/components/ReminderCard.tsx",
+          "operation": "create",
+          "description": "Create card component to display revision reminder with topic name, times revised badge, next revision date, active status indicator, and actions to mark as revised or deactivate"
+        },
+        {
+          "path": "frontend/src/components/ReminderForm.tsx",
+          "operation": "create",
+          "description": "Create form component for creating revision reminders with topic input, initial revision count, and next revision date picker"
+        },
+        {
+          "path": "frontend/src/hooks/useReminders.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for reminder operations including getUserReminders, createRevisionReminder, updateReminder, and deactivateReminder with automatic cache invalidation"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add 'Reminders' navigation link in header menu alongside existing navigation items, maintaining consistent styling and positioning"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route configuration for RemindersPage at /reminders path with authentication guard ensuring only logged-in users can access"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Enhance AI-powered notes with intelligent suggestions, summaries, and key point extraction using NLP",
+      "acceptanceCriteria": [
+        "AI provides automatic summaries or key points for notes",
+        "NLP-based insights are displayed within note interface",
+        "Users see clear value-add from AI processing of their notes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/NoteCard.tsx",
+          "operation": "modify",
+          "description": "Add AI insights section displaying auto-generated summary or key points below note content preview with distinct styling to highlight AI-enhanced value"
+        },
+        {
+          "path": "frontend/src/components/NoteEditor.tsx",
+          "operation": "modify",
+          "description": "Add AI suggestions panel or button that triggers intelligent content analysis, showing summaries and key points during editing with option to incorporate suggestions"
+        },
+        {
+          "path": "frontend/src/pages/NotesPage.tsx",
+          "operation": "modify",
+          "description": "Update notes display to prominently feature AI-enhanced notes with badges or indicators showing which notes have AI-generated insights"
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Remove explicit domain selection UI and present unified interface where classification happens automatically",
+      "acceptanceCriteria": [
+        "No dropdown or radio buttons for domain selection exist in upload flow",
+        "Upload interface is unified for all document types",
+        "Domain is determined automatically and transparently"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DocumentUpload.tsx",
+          "operation": "modify",
+          "description": "Remove any domain selection dropdown or radio buttons from upload interface, simplify to single file upload field with unified messaging indicating system will automatically classify document type"
+        },
+        {
+          "path": "frontend/src/pages/ReportsPage.tsx",
+          "operation": "modify",
+          "description": "Update upload dialog and instructions to reflect automatic domain classification, removing references to manual domain selection and emphasizing unified document upload experience"
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Refine overall UI for polished, professional appearance with consistent spacing, clear hierarchy, smooth transitions, and intuitive navigation",
+      "acceptanceCriteria": [
+        "Interface has consistent styling and spacing across all pages",
+        "Navigation is intuitive with clear labels and logical flow",
+        "Visual design appears polished and professional",
+        "All features are easily discoverable and accessible"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Refine global styles for consistent spacing scale, smooth transitions on interactive elements, and enhanced visual hierarchy while maintaining warm amber/orange palette"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Polish header navigation with improved spacing, clear active states, consistent hover effects, and logical grouping of navigation items (Notes, Reports, Timetable, Quizzes, Reminders)"
+        },
+        {
+          "path": "frontend/src/pages/NotesPage.tsx",
+          "operation": "modify",
+          "description": "Enhance page layout with consistent grid spacing, polished empty states with clear call-to-action, and smooth transitions for modal dialogs"
+        },
+        {
+          "path": "frontend/src/pages/ReportsPage.tsx",
+          "operation": "modify",
+          "description": "Refine page layout with consistent card grid spacing, professional empty state design, and smooth upload dialog transitions"
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Update hero section and feature grid to reflect all new capabilities (legal analysis, timetable, quizzes, reminders) with consistent spacing and professional visual hierarchy. Verify usage of generated hero-banner.dim_1200x400.png and medical-icon.dim_128x128.png assets located at frontend/public/assets/generated/"
+        },
+        {
+          "path": "frontend/src/components/NoteCard.tsx",
+          "operation": "modify",
+          "description": "Refine card styling with consistent padding, clear visual hierarchy between title and content, polished action buttons, and smooth hover transitions"
+        },
+        {
+          "path": "frontend/src/components/ReportCard.tsx",
+          "operation": "modify",
+          "description": "Enhance card design with consistent spacing, clear status badges, professional typography, and smooth interaction states"
+        }
+      ]
+    }
+  ]
+}
